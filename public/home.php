@@ -4,7 +4,7 @@
     <div id="navigation">
     <br />
       <a href="login.php" ><b>Admin Panel</b></a><br/><br/>
-      <a href="user.php"><b>Kitchen Panel</b></a><br/><br />
+      <a href="kitchenlogin.php"><b>Kitchen Panel</b></a><br/><br />
       <a href="billing.php"><b>Customer Billing</b></a>
      
 
