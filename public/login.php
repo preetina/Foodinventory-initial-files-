@@ -6,19 +6,22 @@
 <title>Untitled Document</title>
 </head>
 <body>
-<h1 style="font-family: Lucida Calligraphy; font-size: 22px;">Admin Login</h1>
+<center><h1 style="font-family: Lucida Calligraphy; font-size: 22px;">Admin Login</h1></center>
 <form name="login" method="POST" action="admin.php">
-<p style="font-size: 20px; font-family: Minion Pro Med;"><b>Username </b><input name="username" type="text" maxlength=20/></p>
-<p style="font-size: 20px; font-family: Minion Pro Med;"><b>Password</b> <input name="password" type="password" maxlength=50 /></p>
+<table width=300px" border="2" cellpadding="1" cellspacing="1" align="center">
+<tr><th><p style="font-size: 20px; font-family: Minion Pro Med;"><b>Username </b><input name="username" type="text" maxlength=20/></p></th></tr>
+<th><p style="font-size: 20px; font-family: Minion Pro Med;"><b>Password</b> <input name="password" type="password" maxlength=50 /></p></th>
+<tr><td colspan="2"><br /><b><center><input type="submit" name="login" value="Login" /></center></b></p></td></tr>
+
+</table>
 <?php
 if(isset($_POST['login']) && !isset($_SESSION['admin'])){
 	?>
-    <p style="color: red"><span class="error"><b>Incorrect username or password</b></span></p>
+   <center> <p style="color: red"><span class="error"><b>Incorrect username or password!</b></span></p></center>
     <?php
     }
 	?>
     
-<p style="font-family: Minion Pro Med; font-size: 18px;"><input type="submit" name="login" value="Login"/></p>
 </form>
 
 </body>

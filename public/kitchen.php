@@ -13,13 +13,14 @@ include("dbconnect.php");
 
 
 
-session_start();
+//session_start();
 //check to see if user is logging out
 if(isset($_GET['action'])){
 	if($_GET['action']=="logout"){
 		unset($_SESSION['kitchen']);
 	}
 }
+//if login form has been submitted, check if username and passsword match
 //if login form has been submitted, check if username and passsword match
 if(isset($_POST['login'])){
 	$login_sql="SELECT * FROM kitchen WHERE username='".$_POST['username']." ' AND password='".sha1($_POST['password'])."'";
@@ -29,10 +30,14 @@ if(isset($_POST['login'])){
 	}
 }
 if(isset($_SESSION['kitchen'])){
-	include("kitchenpanel.php");
-}else{
-	include("kitchenlogin.php");
+
+	//$url= kitchenpanel.php;
+	 include("kitchenpanel.php");
+}else{ 
+	//$url =  kitchenlogin.php;
+	 include("kitchenlogin.php");
 }
+
 ?>
 </body>
 </html>

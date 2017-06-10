@@ -1,4 +1,6 @@
 <?php include("../includes/layouts/header.php");?>
+
+
 <div id="main">
 
     <div id="navigation">
@@ -13,11 +15,13 @@
     </div>
    
     <div id="page">
+
      
     </div>
     <br />
-    <p style="text-align: left"><b>Welcome to our home page!</b></p>
-
+    
+  <p style="text-align: left;font-size:28px; text-align: center"><b>Welcome to our home page!</b></p>
+ 
   
     </div>
     <?php include("../includes/layouts/footer.php");?>
