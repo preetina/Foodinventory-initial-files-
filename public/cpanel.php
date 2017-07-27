@@ -9,9 +9,14 @@
 <br />
 <p style="font-size:17px; font-family: Minion Pro Med;"><a href="stockpanel.php"><b>Stock Management</b> </a></p>
 <p style="font-size:17px; font-family: Minion Pro Med;"><a href="menupanel.php"><b>Menu Management</b> </a></p>
+<p style="font-size:17px; font-family: Minion Pro Med;"><a href="display_order.php"><b>View Orders</b> </a></p>
 <p style="font-size: 17px; font-family:Minion Pro Med;"><a href="home.php"><b>Logout</b></a></p>
 
 </div>
+ <div id="page">
+
+    
+    </div>
 <br/>
 <p style="font-size: 28px; text-align: center;"> <b>Welcome to our Admin Panel!<br/>
 </div>
@@ -19,7 +24,4 @@
 	
 </body>
 </html>
-/*<p style="font-size: 17px; font-family:Minion Pro Med;"><a href="insert.php" ><b>Add Stock</b></a></p>
-<p style="font-size: 17px; font-family:Minion Pro Med;"><a href="stock_modify.php" ><b>Update Stock</b></a></p>
-<p style="font-size: 17px; font-family:Minion Pro Med;"><a href="delete_item.php" ><b>Delete Stock</b></a></p>
-
+<?php include("../includes/layouts/footer.php");?>

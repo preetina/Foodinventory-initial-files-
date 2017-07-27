@@ -10,9 +10,11 @@
 <h1 style="text-align: left; font-family: Lucida Calligraphy; font-size:19px ;"><b><u>Menu Management</u></b></h1>
 
 <br />
+<p style="font-size: 17px; font-family:Minion Pro Med;"><a href="menuinsert.php"><b>Insert Item</b></a></p>
 
 <p style="font-size: 17px; font-family:Minion Pro Med;"><a href="delete_from_menu.php"><b>Delete Item</b></a></p>
 <p style="font-size: 17px; font-family:Minion Pro Med;"><a href="menu_update.php"><b>Update Item</b></a></p>
+<hr />
 <p style="font-size: 17px; font-family:Minion Pro Med;"><a href="home.php"><b>Logout</b></a></p>
 
 

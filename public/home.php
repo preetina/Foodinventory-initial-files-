@@ -5,9 +5,9 @@
 
     <div id="navigation">
     <br />
-      <a href="login.php" ><b>Admin Panel</b></a><br/><br/>
-      <a href="kitchenlogin.php"><b>Kitchen Panel</b></a><br/><br />
-      <a href="billing.php"><b>Customer Billing</b></a>
+      <p style="font-size: 17px; font-family:Minion Pro Med;"><a href="login.php" ><b>Admin Panel</b></a></p>
+      <p style="font-size: 17px; font-family:Minion Pro Med;"><a href="kitchenlogin.php"><b>Kitchen Panel</b></a></p>
+      <p style="font-size: 17px; font-family:Minion Pro Med;"><a href="billing.php"><b>Customer Billing</b></p></a>
      
 
     <h1></h1>
@@ -20,7 +20,7 @@
     </div>
     <br />
     
-  <p style="text-align: left;font-size:28px; text-align: center"><b>Welcome to our home page!</b></p>
+  <p style="text-align: left;font-size:28px; text-align: center"><b>Welcome to Food Inventory and Customer Billing System!</b></p>
  
   
     </div>

@@ -22,6 +22,8 @@ include("index.php");
 		 //often these are form values in $_POST
 		 $Item=$_POST['Item'];
 	     $Quantity=$_POST['Quantity'];
+          $Unit=$_POST['Unit'];
+	     $Category=$_POST['Category'];
 	     $Date=$_POST['Date'];
 	     $Rate=$_POST['Rate'];
     // $SN=mysqli_real_escape_string($connection,$SN);
@@ -29,7 +31,7 @@ include("index.php");
 		 
 		  //2. performing database query
  	 
-		$query = "INSERT into list VALUES (NULL,'".$Item."','".$Quantity."','".$Date."',".$Rate.")";
+		$query = "INSERT into list VALUES (NULL,'".$Item."','".$Quantity."','".$Unit."','".$Category."','".$Date."',".$Rate.")";
 		// var_dump($query);
 		
 if ($connection->query($query) === TRUE) {

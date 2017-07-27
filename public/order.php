@@ -15,15 +15,28 @@ include("dbconnect.php");
 <body>
 <div id="main">
     <div id="navigation">
-    <h1 style="text-align: left; font-family: Lucida Calligraphy; font-size:19px;"><b><u>Kitchen Panel<br/><p style="font-size: 12px">(Place Order)</p></u></b></h1>
+   <h1 style="text-align: left; font-family: Lucida Calligraphy; font-size:19px;"><b><u>Kitchen Panel</p></u></b></h1>
 <br />
-<p style="font-size: 17px; font-family:Minion Pro Med;"><a href="additem_menu.php"><b>Add Item</b></a></p>
-<p style="font-size: 17px; font-family:Minion Pro Med;"><a href="menu_update.php"><b>Update Item</b></a></p>
-<p style="font-size: 17px; font-family:Minion Pro Med;"><a href="home.php"><b>Logout</b></a></p>
+<p style="font-size: 17px; font-family:Minion Pro Med;"><a href="order.php"><b>Place Order</b></a></p>
+<hr/>
+<p style="font-size: 17px; font-family:Minion Pro Med;"><b>View Stock</b></a></p>
+<p style="font-size: 17px; font-family:Minion Pro Med;"><a href="groc_view.php"><b>1.Fruits & Grocery</b></a></p>
+<p style="font-size: 17px; font-family:Minion Pro Med;"><a href="len_view.php"><b>2.Lentils</b></a></p>
+<p style="font-size: 17px; font-family:Minion Pro Med;"><a href="spices_view.php"><b>3.Spices</b></a></p>
+<p style="font-size: 17px; font-family:Minion Pro Med;"><a href="misc_view.php"><b>4.Miscellaneous</b></a></p>
+<p style="font-size: 17px; font-family:Minion Pro Med;"><a href="liq_view.php"><b>5.Liquid & Beverages</b></a></p>
 
+
+
+
+
+<hr />
+<p style="font-size: 17px; font-family:Minion Pro Med;"><a href="home.php"><b>Logout</b></a></p>
 </div>
 <br/>
 <form action="order_page.php" method="post">
+<br/>
+<p style="text-align:center; font-size:30px; font-family: Calibri ; color:white "><b>Place Order!</b></p>
 <p style="text-align: center;"><b>Order an item here!</b></p>
 <table width=350px" border="4" cellpadding="2" cellspacing="3" align="center">
 
@@ -32,12 +45,14 @@ include("dbconnect.php");
 <tr style="text-align: center;"><td colspan="2" ><input type="submit" name="submit" value="Order">
 </td></tr>
 </table>
+
 <div>
 <br/>
-
+<!-- <?php
+include("display_records.php");
+?> -->
 </div>
 </div>
-
 </form>
 
 </body>

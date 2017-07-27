@@ -1,14 +1,15 @@
 <?php
-include ("dbconnect.php");
-include("Kitchenpanel.php");
+include("dbconnect.php");
+include("index.php");
+
+//include("Kitchenpanel.php");
 //make connection
 
 
 //select db
 
-$sql= "select * From list";
+$sql= "SELECT * FROM `order`";
 $record=mysqli_query($dbconnect,$sql);
-
 
 ?>
 <html>
@@ -16,8 +17,8 @@ $record=mysqli_query($dbconnect,$sql);
 <title>Display records</title>
 </head>
 <body>
-
-<p style="text-align: center;">View Your Product List here!</p>
+<p style="text-align: right;"><a href="home.php"><input type="Button" value="Logout"></a></p>
+<p style="text-align: left; font-family: Lucida Calligraphy; font-size:28px; text-align:center;"><b>Ordered Items!</b></p>
 <table width="600px" border="2" cellpadding="2" cellspacing="2" align="center">
 <tr style="font-family: Cambria">
 
@@ -26,13 +27,15 @@ $record=mysqli_query($dbconnect,$sql);
 </tr>
 
 <?php
+//print_r(mysqli_fetch_assoc($record));exit;
 while($list=mysqli_fetch_assoc($record)){
 	echo "<tr>";
 	//echo "<td>".$list['SN']."</td>";
 		echo "<td>".$list['Item']."</td>";
 			echo "<td>".$list['Quantity']."</td>";
 echo "</tr>";
-}//end while
+}
+//mysqli_free_result($list);
 ?>
 </table>
 </body>

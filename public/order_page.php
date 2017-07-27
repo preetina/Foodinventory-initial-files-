@@ -25,9 +25,10 @@ include("index.php");
 	     
 		 
 		  //2. performing database query
- 	 
-		$query = "INSERT into order VALUES (NULL,'".$Item."','".$Quantity."')";
-		// var_dump($query);
+ 		$query = "INSERT INTO `order`(`Id`, `Item`, `Quantity`) VALUES (null,'".$Item."','".$Quantity."')"; 
+		// $query = "INSERT INTO 'order' (Id,Item,Quantity) VALUES (null,'".$Item."','".$Quantity."')";
+		//print_r($query);
+		var_dump($query);
 		
 if ($connection->query($query) === TRUE) {
   
