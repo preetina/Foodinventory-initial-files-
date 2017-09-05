@@ -13,7 +13,7 @@ include("dbconnect.php");
 
 
 
-//session_start();
+session_start();
 //check to see if user is logging out
 if(isset($_GET['action'])){
 	if($_GET['action']=="logout"){

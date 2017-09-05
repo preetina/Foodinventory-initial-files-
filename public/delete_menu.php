@@ -10,7 +10,7 @@ mysqli_select_db($con,'foodinventory');
 $sql="DELETE FROM menu WHERE Id='$_GET[id]'";
 //Executing the query
 if (mysqli_query($con,$sql))
-	header("refresh:0.5; url=delete_from_menu.php");
+	header("refresh:0.5; url=menu_del.php");
 else
 	echo "<b>Not Deleted!</b>";
 

@@ -1,8 +1,8 @@
 <?php
 include ("index.php");
 
-$bev="select * From list where Category='Bev'";
-$brec=mysqli_query($dbconnect,$bev);
+$sql= "select * From list where Category='Liquid & Beverages'";
+$record=mysqli_query($dbconnect,$sql);
 ?>
 <html>
 <head>
@@ -11,36 +11,40 @@ $brec=mysqli_query($dbconnect,$bev);
 <body>
  <div id="main">
     <div id="navigation">
-    <h1 style="text-align: left; font-family: Lucida Calligraphy; font-size:19px;"><b>Kitchen Panel<br/></b></h1>
-<br />
-<p style="font-size: 17px; font-family:Minion Pro Med;"><a href="order.php"><b>Place Order</b></a></p>
-<hr/>
-<p style="font-size: 17px; font-family:Minion Pro Med;"><b>View Stock</b></a></p>
-<p style="font-size: 17px; font-family:Minion Pro Med;"><a href="groc_view.php"><b>1.Fruits & Grocery</b></a></p>
-<p style="font-size: 17px; font-family:Minion Pro Med;"><a href="len_view.php"><b>2.Lentils</b></a></p>
-<p style="font-size: 17px; font-family:Minion Pro Med;"><a href="spices_view.php"><b>3.Spices</b></a></p>
-<p style="font-size: 17px; font-family:Minion Pro Med;"><a href="misc_view.php"><b>4.Miscellaneous</b></a></p>
-
+   	<h1 style="text-align: left; font-family: Lucida Calligraphy; font-size:19px ;"><b><u><a href="admin.php">Admin Panel</a></u></b></h1>
+<p style="font-size:18px; font-family: Minion Pro Med; color:#EEE4B9;"><b>Stock Management</b></p>
+<p style="font-size: 17px; font-family:Minion Pro Med;"><a href="demo.php" ><b>Manage Stock</b></a></p>
+<p style="font-size: 17px; font-family:Minion Pro Med;"><a href="up2.php" ><b>View Stock</b></a></p>
+<p style="font-size: 17px; font-family:Minion Pro Med;"><a href="thre.php" ><b>Alert</b></a></p>
+<p style="font-size: 17px; font-family:Minion Pro Med;"><a href="log_search.php" ><b>View Log</b></a></p>
+<hr />
+<p style="font-size:17px; font-family: Minion Pro Med;"><a href="menupanel.php"><b>Menu Management</b> </a></p>
+<p style="font-size:17px; font-family: Minion Pro Med;"><a href="display_order.php"><b>View Orders</b> </a></p>
 
 <hr />
 <p style="font-size: 17px; font-family:Minion Pro Med;"><a href="home.php"><b>Logout</b></a></p>
+
 </div>
 <br/>
-<p style="text-align:center; font-size:30px; font-family: Calibri ; color:white "><b>View Stock!</b></p>
+<p style="text-align:center; font-size:30px; font-family: Calibri ; color:white "><b>View Stock</b></p>
 
-<table width="400px" border="2" cellpadding="2" cellspacing="3" align="center">
+<table width="600px" border="2" cellpadding="2" cellspacing="3" align="center">
 <tr style="font-family: Cambria">
-<tr style="color:#1A446C"><td colspan="2"><center>Liquid & Beverages</center></td></tr>
+<tr style="color:#1A446C"><td colspan="4"><center>Liquid & Beverages</center></td></tr>
 <th style="color:#1A446C"><b>Item</b></th>
 <th style="color:#1A446C"><b>Quantity</th>
+<th style="color:#1A446C"><b>Date</th>
+<th style="color:#1A446C"><b>Rate</th>
 </tr>
 
 <?php
-while($list=mysqli_fetch_assoc($brec)){
+while($list=mysqli_fetch_assoc($record)){
 	echo "<tr>";
 	//echo "<td>".$list['SN']."</td>";
 		echo "<td>".$list['Item']."</td>";
 			echo "<td>".$list['Quantity'].$list['Unit']."</td>";
+            echo "<td>".$list['Date']."</td>";
+                echo "<td>".$list['Rate']."</td>";
 echo "</tr>";
 }
 //end while
@@ -56,6 +60,5 @@ echo "</tr>";
 
 </body>
 </html>
-
 
 

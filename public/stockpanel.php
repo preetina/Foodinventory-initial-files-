@@ -1,5 +1,6 @@
 <html>
 <?php include("index.php");
+
 ?>
 
 <head><title>Admin</title>
@@ -7,12 +8,16 @@
 <div id="main">
     <div id="navigation">
 
-<h1 style="text-align: left; font-family: Lucida Calligraphy; font-size:19px ;"><b><u>Admin Panel</u></b></h1>
-<br />
-<p style="font-size: 17px; font-family:Minion Pro Med;"><a href="insert.php" ><b>Add Stock</b></a></p>
-<p style="font-size: 17px; font-family:Minion Pro Med;"><a href="stock_modify.php" ><b>Update Stock</b></a></p>
-<p style="font-size: 17px; font-family:Minion Pro Med;"><a href="delete_item.php" ><b>Delete Stock</b></a></p>
-<p style="font-size: 17px; font-family:Minion Pro Med;"><a href="thre.php" ><b>Warning</b></a></p>
+<h1 style="text-align: left; font-family: Lucida Calligraphy; font-size:19px ;"><b><u><a href="admin.php">Admin Panel</a></u></b></h1>
+<p style="font-size:18px; font-family: Minion Pro Med; color:#EEE4B9;"><b>Stock Management</b></p>
+<p style="font-size: 17px; font-family:Minion Pro Med;"><a href="demo.php" ><b>Manage Stock</b></a></p>
+<p style="font-size: 17px; font-family:Minion Pro Med;"><a href="up2.php" ><b>View Stock</b></a></p>
+<p style="font-size: 17px; font-family:Minion Pro Med;"><a href="thre.php" ><b>Alert</b></a></p>
+<p style="font-size: 17px; font-family:Minion Pro Med;"><a href="log_search.php" ><b>View Log</b></a></p>
+<hr />
+<p style="font-size:17px; font-family: Minion Pro Med;"><a href="menupanel.php"><b>Menu Management</b> </a></p>
+<p style="font-size:17px; font-family: Minion Pro Med;"><a href="display_order.php"><b>View Orders</b> </a></p>
+
 <hr />
 <p style="font-size: 17px; font-family:Minion Pro Med;"><a href="home.php"><b>Logout</b></a></p>
 
@@ -22,7 +27,7 @@
 
     
     </div>
-<br/>
-<p style="font-size:28px; text-align:center;"><b>Manage your stock here!</b></p>
+
+<center><img src="sto.jpg" style="width:1120px  ;height:600px"></center>
 <body></body>
 </html>

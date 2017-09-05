@@ -10,11 +10,11 @@ include("index.php");
 </head>
 <body>
 
-<center><h1 style="font-family: Lucida Calligraphy; font-size: 22px;">Kitchen Login</h1></center>
+<center><h1 style="font-family: Lucida Calligraphy; font-size: 22px;color:#1A446C">Kitchen Login</h1></center>
 <form name="login" method="POST" action="kitchen.php">
-<table width=350px" border="4" cellpadding="2" cellspacing="2" align="center">
-<tr><th><p style="font-size: 20px; font-family: Minion Pro Med;"><b>Username</th><th></b><input name="username" type="text" maxlength=20/></p></th></tr>
-<tr><th><p style="font-size: 20px; font-family: Minion Pro Med;"><b>Password</b></th> <th><input name="password" type="password" maxlength=50 /></p></th></tr>
+<table width=400px" border="3" cellpadding="3" cellspacing="2" align="center">
+<tr><th><p style="font-size: 30px; font-family: Minion Pro Med;color:#1A446C"><b>Username</b> <input name="username" type="text" maxlength=20/></p></th></tr>
+<tr><th><p style="font-size: 30px; font-family: Minion Pro Med;color:#1A446C"><b>Password</b> <input name="password" type="password" maxlength=50 /></p></th></tr>
 <tr><td colspan="2"><br /><b><center><input type="submit" name="login" value="Login" /></center></b></p></td></tr>
 
 

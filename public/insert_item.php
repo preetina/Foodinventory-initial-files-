@@ -18,8 +18,10 @@ include("index.php");
 		   
 		  ?>
 		 
-		 <?php
-		 //often these are form values in $_POST
+		
+         <?php
+         if(isset($_POST['add']))
+         {
 		 $Item=$_POST['Item'];
 	     $Quantity=$_POST['Quantity'];
           $Unit=$_POST['Unit'];
@@ -32,17 +34,57 @@ include("index.php");
 		  //2. performing database query
  	 
 		$query = "INSERT into list VALUES (NULL,'".$Item."','".$Quantity."','".$Unit."','".$Category."','".$Date."',".$Rate.")";
+      //  $query="UPDATE list SET Item=" '.$_POST[item].', Quantity='$_POST[quan]',Date='$_POST[dat]',Rate='$_POST[rat]' WHERE SN='$_POST[sn]'";
+
 		// var_dump($query);
 		
 if ($connection->query($query) === TRUE) {
   
     header("refresh:0.5; url=insert.php");
+    
       //echo "New record created successfully";
 } else {
     echo "Error: " . $query . "<br>" . $connection->error;
 }
 
 $connection->close();
+}
+else if(isset($_POST['update']))
+{
+        $Item=$_POST['Item'];
+	     $Quantity=$_POST['Quantity'];
+          $Unit=$_POST['Unit'];
+	     $Category=$_POST['Category'];
+	     $Date=$_POST['Date'];
+	     $Rate=$_POST['Rate']; 
+   $squery= "select * from list";
+         $result=mysqli_query($dbconnect,$squery);
+         $datas=array();
+        if(mysqli_num_rows($result)>0)
+        {
+            while($row=mysqli_fetch_assoc($result)){
+                    if($Item==$row['Item'])
+                    {
+                        $id=$row['SN'];
+                        $newq=$Quantity+$row['Quantity'];
+                    }
+            }
+        }
+        $inquery="UPDATE list SET Quantity='" .$newq."', Unit='".$Unit."', Category='".$Category."', Date='".$Date."', Rate='".$Rate."' WHERE SN=".$id;
+        //var_dump($inquery);
+        
+        if ($connection->query($inquery) === TRUE) {
+  
+    header("refresh:0.5; url=insert.php");
+    
+      //echo "New record created successfully";
+} else {
+    echo "Error: " . $inquery . "<br>" . $connection->error;
+}
+
+$connection->close();
+}
+
 		  
 		   ?>
 
@@ -61,8 +103,6 @@ $connection->close();
 		
 	</body>
 </html>
- <?php
  
-    //.5 close database connection
-	  //mysqli_close($connection); 
- ?>
+ 
+ 

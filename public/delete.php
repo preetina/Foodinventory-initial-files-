@@ -10,7 +10,7 @@ mysqli_select_db($con,'foodinventory');
 $sql="DELETE FROM list WHERE SN='$_GET[id]'";
 //Executing the query
 if (mysqli_query($con,$sql))
-	header("refresh:1; url=delete_item.php");
+header("refresh:0.5; url=demo.php");
 else
 	echo "<b>Not Deleted!</b>";
 

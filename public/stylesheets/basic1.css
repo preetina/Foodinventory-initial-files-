@@ -15,26 +15,26 @@ a:hover{color:#1A446C;}
 #header{
     height:80px;
     margin: 0; padding:0; text-align:left;
-    background: #1A446C; color:powderblue ;
+    background:#8D0D19 ; color:#EEE4B9 ;
 }
-#header h1{padding: 1em ;margin:0;font-family:Harrington}
+#header h1{padding: 1em ;margin:0;font-family:Baskerville Old Face;font-size: 28px;}
 #main{
     height:600px; width:100%;  margin:0;
-    padding:0; background:powderblue; font-family:Lucida Calligraphy; font-size: 18px;;
+    padding:0; background:#EEE4B9; font-family:Cambria; font-size: 20px;;
 }
 #footer{
     clear:both;
     height:1em; margin: 0;padding:1em;
-    text-align: center;background:#1A446C; color:#0466F4;
+    text-align: center;background:#8D0D19; color:#0466F4;
 }
 #navigation{
     float:left;
     width:160px; height:100%;
     margin:0; padding:0 2em;
-    color:white; background:#1A446C; font-size: 16px; text-align: left;
+    color:white; background:#8D0D19; font-size: 16px; text-align: left;
     }
     #navigation a{color:white; text-decoration: none;}
-    #navigation a:hover{color:powderblue;}
+    #navigation a:hover{color:#EEE4B9;}
     ul.subjects{margin: 1em 0;padding-left: 3em; list-style: square;
         }
     .selected{font-weight: bold;}

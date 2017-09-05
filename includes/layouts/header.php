@@ -6,7 +6,7 @@
 </head>
 <body >
 <div id="header" >
-<h1>Food Inventory And Customer Billing System</h1><hr />
+<h1>Food Inventory System</h1><hr />
 
 </div>
 </body>
