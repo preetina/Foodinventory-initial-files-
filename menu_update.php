@@ -7,11 +7,12 @@ $con=mysqli_connect('127.0.0.1','root','');
 mysqli_select_db($con,'foodinventory');
 
 //selecting query
-$sql="UPDATE menu SET Name='$_POST[nam]', Price='$_POST[price]' WHERE ID='$_POST[Id]'";
+//$sql="UPDATE menu SET Name='$_POST[Name]',Category='$_POST[Category]',Price='$_POST[Price]'";
+$sql="UPDATE menu SET Name='$_POST[Name]',Category='$_POST[Category]',Price='$_POST[Price]' WHERE ID='$_POST[Id]'";
 
 //Executing the query
 if (mysqli_query($con,$sql))
-	header("refresh:1; url=menu_modify.php");
+	header("refresh:0.5; url=update_menu.php");
 else
 	echo "<b>Not Updated!</b>";
 

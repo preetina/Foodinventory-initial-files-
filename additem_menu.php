@@ -24,16 +24,18 @@ include("dbconnect.php");
 </div>
 <br/>
 <form action="addinmenu.php" method="post">
-<p><b>Add an item here.</b></p>
-<br/><input type="text" name="Name" placeholder="Enter the Item name" ><br/><br/>
-<br/><input type="text" name="Price" placeholder="Enter the Price" ><br/></br>
+<table width=350px" border="4" cellpadding="2" cellspacing="3" align="center">
+<center><p><b>Add an item here!</b></p></center>
+<tr><th><br/>Item <input type="text" name="Name" placeholder="Enter the Item name" ><br/><br/></th></tr>
+<tr><th><br/>Price<input type="text" name="Price" placeholder="Enter the Price" ><br/></br></th></tr>
+<tr><td colspan="2"><center><input type="submit" name="submit" value="Add"></center></td></tr>
+
 <div>
 <br/>
-<input type="submit" name="submit" value="Add">
 
 </div>
 </div>
-
+</table>
 </form>
 
 </body>

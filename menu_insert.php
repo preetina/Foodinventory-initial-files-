@@ -14,30 +14,26 @@ include("index.php");
 			"(". mysqli_connect_errno() .")"
 			);
 	 }
-	 
-		   
-		  ?>
+	 ?>
 		 
 		 <?php
 		 //often these are form values in $_POST
-         //$Id=$_POST['Id'];
-		 $Item=$_POST['Item'];
-	     $Quantity=$_POST['Quantity'];
-             $Unit=$_POST['Unit'];
-                 $Category=$_POST['Category'];
-                 $Date=$_POST['Date'];
-         
+		 $Name=$_POST['Name'];
+        $Category=$_POST['Category'];
+	     $Price=$_POST['Price'];
+       
 	     
+    // $SN=mysqli_real_escape_string($connection,$SN);
+		 
 		 
 		  //2. performing database query
- 		$query = "INSERT INTO `order`(`Id`, `Item`, `Quantity`,`Unit`,`Category`,`Date`) VALUES (null,'".$Item."','".$Quantity."','".$Unit."','".$Category."','".$Date."')"; 
-		// $query = "INSERT INTO 'order' (Id,Item,Quantity,Unit,Category,Date) VALUES (null,'".$Item."','".$Quantity."','".$Unit."','".$Category."','".$Date."')";
-		//print_r($query);
-		//var_dump($query);
+ 	 
+		$query = "INSERT INTO `menu`(`Id`, `Name`,`Category`, `Price`) VALUES (null,'".$Name."','".$Category."',".$Price.")";
+		// var_dump($query);
 		
 if ($connection->query($query) === TRUE) {
   
-    header("refresh:0.2; url=order.php");
+    header("refresh:0.5; url=menuinsert.php");
       //echo "New record created successfully";
 } else {
     echo "Error: " . $query . "<br>" . $connection->error;
@@ -67,18 +63,3 @@ $connection->close();
     //.5 close database connection
 	  //mysqli_close($connection); 
  ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
